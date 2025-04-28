@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.theme.scree.draw.view
+package com.zeycio.drawapp.ui.drawScreen.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -28,8 +28,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.zeycio.drawapp.ui.theme.scree.draw.model.getRandomImageFromStorage
-import com.zeycio.drawapp.ui.theme.scree.draw.viewmodel.ImageTransformViewModel
+import com.zeycio.drawapp.ui.drawScreen.model.getRandomImageFromStorage
+import com.zeycio.drawapp.ui.drawScreen.viewmodel.ImageTransformViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

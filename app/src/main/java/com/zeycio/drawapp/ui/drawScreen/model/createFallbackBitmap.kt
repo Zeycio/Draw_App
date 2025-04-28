@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.theme.scree.draw.model
+package com.zeycio.drawapp.ui.drawScreen.model
 
 import android.graphics.Bitmap
 import android.graphics.Canvas

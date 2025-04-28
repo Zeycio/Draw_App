@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.theme
+package com.zeycio.drawapp.theme
 
 
 import android.os.Build

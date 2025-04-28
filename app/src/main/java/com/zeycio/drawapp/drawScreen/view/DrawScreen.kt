@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.drawScreen.view
+package com.zeycio.drawapp.drawScreen.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -28,13 +28,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.zeycio.drawapp.ui.drawScreen.model.getRandomImageFromStorage
-import com.zeycio.drawapp.ui.drawScreen.viewmodel.ImageTransformViewModel
+import com.zeycio.drawapp.drawScreen.model.getRandomImageFromStorage
+import com.zeycio.drawapp.drawScreen.viewmodel.ImageTransformViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @Composable
-fun MainScreen(viewModel: ImageTransformViewModel) {
+fun MainDrawScreen(viewModel: ImageTransformViewModel) {
     val context = LocalContext.current
     val coroutineScope = rememberCoroutineScope()
     var screenWidth by remember { mutableIntStateOf(0) }

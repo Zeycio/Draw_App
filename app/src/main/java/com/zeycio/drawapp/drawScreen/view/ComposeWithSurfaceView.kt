@@ -1,11 +1,10 @@
-package com.zeycio.drawapp.ui.drawScreen.view
+package com.zeycio.drawapp.drawScreen.view
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import com.zeycio.drawapp.ui.drawScreen.model.DrawingSurfaceView
-import com.zeycio.drawapp.ui.drawScreen.viewmodel.ImageTransformViewModel
+import com.zeycio.drawapp.drawScreen.viewmodel.ImageTransformViewModel
 
 
 @Composable

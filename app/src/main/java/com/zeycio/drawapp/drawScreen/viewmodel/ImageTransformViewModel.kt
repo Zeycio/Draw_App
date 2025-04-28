@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.drawScreen.viewmodel
+package com.zeycio.drawapp.drawScreen.viewmodel
 
 import android.graphics.Bitmap
 import android.graphics.Matrix

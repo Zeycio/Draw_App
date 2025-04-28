@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.drawScreen.model
+package com.zeycio.drawapp.drawScreen.model
 
 import android.content.ContentResolver
 import android.content.Context

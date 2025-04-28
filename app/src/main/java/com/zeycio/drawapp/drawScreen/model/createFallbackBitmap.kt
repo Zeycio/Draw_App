@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.drawScreen.model
+package com.zeycio.drawapp.drawScreen.model
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -20,6 +20,5 @@ fun createFallbackBitmap(): Bitmap {
 
     paint.color = android.graphics.Color.GREEN
     canvas.drawRect(200f, 200f, 250f, 250f, paint)
-
     return bitmap
 }

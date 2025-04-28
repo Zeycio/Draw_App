@@ -1,4 +1,4 @@
-package com.zeycio.drawapp.ui.drawScreen.model
+package com.zeycio.drawapp.drawScreen.view
 
 
 import android.content.Context
@@ -10,7 +10,7 @@ import android.graphics.RectF
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import com.zeycio.drawapp.ui.drawScreen.viewmodel.ImageTransformViewModel
+import com.zeycio.drawapp.drawScreen.viewmodel.ImageTransformViewModel
 import kotlin.math.atan2
 import kotlin.math.sqrt
 

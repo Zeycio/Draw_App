@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 
+//draws a image [if can't  select random image ]
 fun createFallbackBitmap(): Bitmap {
     val bitmap = Bitmap.createBitmap(300, 300, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bitmap)
@@ -21,4 +22,5 @@ fun createFallbackBitmap(): Bitmap {
     paint.color = android.graphics.Color.GREEN
     canvas.drawRect(200f, 200f, 250f, 250f, paint)
     return bitmap
+    //returns one circle with 2 rectangles i
 }

@@ -15,10 +15,10 @@ fun ComposeWithSurfaceView(
         factory = { context ->
             DrawingSurfaceView(context, viewModel).apply {
                 setOnSizeChangedListener(onSizeChanged)
-                viewModel.drawToCanvas = {
+                viewModel.drawToCanvas = { //to draw image on canvas
                     drawSelectedImageOnCanvas()
                 }
-                viewModel.clearCanvas = {
+                viewModel.clearCanvas = {  // to clear canvas
                     canvasBitmap?.eraseColor(android.graphics.Color.TRANSPARENT)
                     postInvalidate()
                 }

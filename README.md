@@ -1,4 +1,6 @@
 # DrawingSurfaceView
+**app by sathwik**
+
 
 **A high-performance Android drawing component**
 

@@ -18,7 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
@@ -34,15 +34,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @Composable
-fun MainScreen(viewModel: ImageTransformViewModel, modifier: Modifier) {
+fun MainScreen(viewModel: ImageTransformViewModel) {
     val context = LocalContext.current
     val coroutineScope = rememberCoroutineScope()
-    var screenWidth by remember { mutableStateOf(0) }
-    var screenHeight by remember { mutableStateOf(0) }
+    var screenWidth by remember { mutableIntStateOf(0) }
+    var screenHeight by remember { mutableIntStateOf(0) }
     val isInDrawingMode = viewModel.isInDrawingMode.collectAsState()
     val brushSize = viewModel.brushSize.collectAsState()
     val brushColor = viewModel.currentColor.collectAsState()
-
+    val selectedBitmap = viewModel.selectedBitmap.collectAsState()
     Column(
         modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -100,7 +100,7 @@ fun MainScreen(viewModel: ImageTransformViewModel, modifier: Modifier) {
             Button(onClick = {
                 coroutineScope.launch(Dispatchers.IO) {
                     val randomImage = getRandomImageFromStorage(context)
-                    if (randomImage != null) {
+                    if (randomImage != null) {                      // get random image and prepare canvas
                         viewModel.setSelectedBitmap(randomImage)
                         viewModel.setIsImagePlaced(false)
                         viewModel.setIsInDrawingMode(false)
@@ -116,7 +116,7 @@ fun MainScreen(viewModel: ImageTransformViewModel, modifier: Modifier) {
             Button(
                 onClick = {
                     viewModel.setAll()
-                }, enabled = viewModel.selectedBitmap != null
+                }, enabled = selectedBitmap.value != null
             ) {
                 Text("Draw")
             }

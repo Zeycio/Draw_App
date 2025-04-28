@@ -1,6 +1,9 @@
 # DrawingSurfaceView
 **app by sathwik**
 
+### Video Preview
+
+<img src=".assets/video.gif" alt="Gif" width="256" height="570">
 
 **A high-performance Android drawing component**
 

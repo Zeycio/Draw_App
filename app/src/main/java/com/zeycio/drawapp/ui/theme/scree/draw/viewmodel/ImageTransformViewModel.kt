@@ -27,7 +27,7 @@ class ImageTransformViewModel : ViewModel() {
     private val _brushSize = MutableStateFlow(10f)
     val brushSize: StateFlow<Float> get() = _brushSize
 
-    // Set functions
+
     fun setSelectedBitmap(bitmap: Bitmap?) {
         _selectedBitmap.value = bitmap
     }
@@ -58,7 +58,7 @@ class ImageTransformViewModel : ViewModel() {
     }
 
     // for draw
-    fun setAll(){
+    fun setAll() {
         viewModelScope.launch {
             _isImagePlaced.value = true
             _isInDrawingMode.value = true
@@ -94,7 +94,10 @@ class ImageTransformViewModel : ViewModel() {
 
     fun updateTransformMatrix() {
         transformMatrix.reset()
-        transformMatrix.postTranslate(-selectedBitmap.value!!.width / 2f, -selectedBitmap.value!!.height / 2f)
+        transformMatrix.postTranslate(
+            -selectedBitmap.value!!.width / 2f,
+            -selectedBitmap.value!!.height / 2f
+        )
         transformMatrix.postScale(scale, scale)
         transformMatrix.postRotate(rotation)
         transformMatrix.postTranslate(translateX, translateY)
